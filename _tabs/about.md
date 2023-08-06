@@ -4,5 +4,14 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+# Rolling the Intros
+Hey there, I'm Jinu Nyachhyon, a passionate ML engineer and aspiring researcher. My expertise lies in frameworks like PyTorch and TensorFlow, where I craft innovative deep learning algorithms and optimize AI models to be lightweight and efficient. 
+
+**Research Interest**: Analyzing Mathematical Trade-offs for Lightweight State-of-the-Art Models.
+
+
+
+
+
+
+
