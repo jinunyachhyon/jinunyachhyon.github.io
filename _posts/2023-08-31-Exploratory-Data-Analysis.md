@@ -1,6 +1,6 @@
 ---
-title: Steps to Exploratory Data Analysis
-categories: [Exploratory Data Analysis, Machine Learning, Beginner]
+title: Approaches to Exploratory Data Analysis
+categories: [Machine Learning, Exploratory Data Analysis]
 tags: [eda, python, machine_learning]
 ---
 
@@ -80,4 +80,45 @@ If we do not identify and deal with outliers, they can have a significant impact
 ```python
 ```
 
+# Step 3: Exploratory Data Analysis
+## EDA with Visualization
 
+1. Scatter Plot
+```python
+plt.plot(data.sepal_length,
+        data.sepal_width,
+        ls='', marker='o',
+        label='sepal'
+)
+```
+
+2. Histogram
+```python
+plt.hist(data.sepal_length, bins=25)
+```
+
+3. Pairplot
+```python
+sns.pairplot(data, hue='species')
+```
+
+4. Hexbin Plot
+```python
+sns.jointplot(x=data['sepal_length'],
+              y=data['sepal_width'],
+              kind='hex')
+```
+
+5. Facet Grid
+```python
+plot = sns.FacetGrid(data,
+                    col='species',
+                    margin_titles=True)
+                    
+plot.map(plt.hist, 'sepal_width', color='green')
+```
+
+## Grouping Data for EDA
+```python
+data.groupby('species').mean()
+```
