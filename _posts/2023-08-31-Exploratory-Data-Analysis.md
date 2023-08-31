@@ -51,3 +51,33 @@ data_url = 'https://data.cityofnewyork.us/resource/erm2-nwe9.json'
 # Read data into a DataFrame
 df = pd.read_json(data_url, orient='columns')
 ```
+
+# Step 2: Data Cleaning: Handling Missing Values and Outliers
+
+### Outliers
+An **outlier** is an observation in data that is distant from most other observations.
+
+Typically, these observations are aberrations and do not accurately represent the phenomenon we are trying to explain through the model.
+
+If we do not identify and deal with outliers, they can have a significant impact on the model.
+
+> It is important to remember that some outliers are informative and provide insights into the data.
+
+### Policies for Missing Data
+- **Remove** the data: remove the row(s) entirely.
+- **Impute** the data: replace with subsitituted values. Fill in the missing data with the most common value, the average value, etc.
+- **Mask** the data: create a category for missing values.
+
+### Policies for Outliers
+- **Remove** them.
+- **Assign** the mean or median value.
+- **Transform** the variable ( the column having outlier). Eg. Log transformation
+- **Predict** that what the value should be:
+    - Using 'similar' observations to predict likely values.
+    - Using regression.
+- **Keep them,** but focus on models that are resistant to outliers.
+
+```python
+```
+
+
