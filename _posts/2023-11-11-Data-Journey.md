@@ -1,5 +1,5 @@
 ---
-title: Data Journey: Unveiling Insights through Retrieval, Cleaning, and Exploratory Data Analysis (EDA)
+title: "Data Journey: Unveiling Insights through Retrieval, Cleaning, and Exploratory Data Analysis (EDA)"
 categories: [Machine Learning, Exploratory Data Analysis]
 tags: [eda, python, machine_learning]
 ---
