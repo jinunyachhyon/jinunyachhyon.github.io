@@ -4,6 +4,10 @@ categories: [Machine Learning, Exploratory Data Analysis]
 tags: [eda, python, machine_learning]
 ---
 
+<p>
+Embarking on a comprehensive exploration of data-driven insights involves a strategic three-step process. Step 1 involves retrieving raw data, which is followed by meticulous data cleaning in Step 2. Finally, Step 3 introduces the world of Exploratory Data Analysis (EDA), where visualization and data grouping techniques come to the forefront. This structured approach ensures a solid foundation for uncovering meaningful patterns and trends within the data landscape.
+</p>
+
 # Step 1: Retrieving Data
 ### Read and query SQL databases
 ```python
@@ -19,11 +23,16 @@ con = sq3.Connection(path)
 
 #Write  query
 query = '''SELECT * FROM rock_songs;
-	 '''				  
+        '''				  
 
 # Execute query
 data  = pd.read_sql(query, con)
 ```
+The code utilizes the **sqlite3** and **pandas** libraries to establish a connection to the specified SQLite database, execute an SQL query, and store the result in a Pandas DataFrame named data. *Ensure that the path to the SQLite database is accurate to successfully retrieve the desired dataset.*
+
+Allow me to clarify this technical term -- SQL, or Structured Query Language, is a specialized programming language for managing relational databases. These databases organize information into tables, with rows representing records and columns holding specific attributes.
+
+For further clarification, relational databases is such type of database that supports the establishment of relationships between tables. These relationships are defined using keys, such as foreign keys, which link records in one table to records in another. 
 
 ### Read and query No-SQL databases
 ```python
