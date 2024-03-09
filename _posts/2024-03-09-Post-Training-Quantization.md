@@ -1,3 +1,9 @@
+---
+title: Post Training Quantization
+categories: [Model Optimization]
+tags: [Quantization, ResNet50, PyTorch, NNDCT, Calibration, Testing, Deployment, TorchScript, XModel, Edge Devices, Hardware Accelerators, FPGA, Xilinx, Vitis AI]
+---
+
 # Introduction
 Quantization is a critical technique in the field of machine learning, aiming to optimize the performance and efficiency of neural network models. At its core, quantization involves reducing the precision of numerical values within the model, typically from floating-point representation to lower precision fixed-point representation. This reduction in precision helps to minimize the memory footprint of the model and accelerates inference speed, making it particularly beneficial for deployment on resource-constrained devices such as mobile phones or edge computing devices.
 
@@ -14,7 +20,7 @@ Quantization involves three key stages to ensure the successful optimization of 
 - Based on this distribution, quantization parameters such as scale factors and zero points are determined.
 - The calibration process aims to strike a balance between preserving model accuracy and minimizing information loss due to quantization.
 
-    ![8-bit-signed-integer-quantization.png](../_images/8-bit-signed-integer-quantization.png)
+    ![8-bit-signed-integer-quantization.png](../images/8-bit-signed-integer-quantization.png)
 
 **Fig. 8-bit signed integer quantization of a floating-point tensor x_{f}. The symmetric dynamic range of x_{f} [-amax, amax] is mapped through quantization to [-128, 127]. (Source: Nvidia)**
 
