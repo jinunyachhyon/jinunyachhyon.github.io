@@ -11,7 +11,10 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Jinu Nyachhyon",
   description: "ML Engineer | AI Researcher",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: '/images/my_good_face.jpg',
+  },
 }
 
 export default function RootLayout({
