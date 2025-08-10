@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
+const isPages = process.env.GITHUB_PAGES === 'true'
+
 const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ['gray-matter'],
     appDir: true,
   },
+
+  // Only export static site when building for GitHub Pages
+  ...(isPages ? { output: 'export' } : {}),
+
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -15,7 +21,7 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    unoptimized: true,
+    unoptimized: isPages, // GH Pages cannot run the image optimizer
   },
   webpack: (config) => {
     config.resolve.fallback = {
