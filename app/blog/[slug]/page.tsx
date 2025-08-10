@@ -9,7 +9,7 @@ import ReactMarkdown from "react-markdown"
 import Link from "next/link"
 
 // Add this to force dynamic rendering
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'
 
 interface BlogPostPageProps {
   params: {
@@ -17,12 +17,12 @@ interface BlogPostPageProps {
   }
 }
 
-// export async function generateStaticParams() {
-//   const posts = getAllBlogPosts()
-//   return posts.map((post) => ({
-//     slug: post.slug,
-//   }))
-// }
+export async function generateStaticParams() {
+  const posts = getAllBlogPosts()
+  return posts.map((post) => ({
+    slug: post.slug,
+  }))
+}
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
   const post = getBlogPostBySlug(params.slug)
