@@ -25,7 +25,7 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    id: "exp1",
+    id: "exp6",
     role: "AI Developer",
     company: "InsydeAI LLC",
     location: "Maryland, USA",
@@ -39,11 +39,11 @@ const experiences: Experience[] = [
     logo: "/logos/insyde_ai_logo.jpeg?height=80&width=80",
   },
   {
-    id: "exp2",
+    id: "exp5",
     role: "Research Assistant",
     company: "Information and Language Processing Research Lab (ILPRL)",
     location: "Kavre, Nepal",
-    period: "2024.07 - 2025.02",
+    period: "2024.07 - Present",
     description: [
       "Collected a 27.5 GB Nepali corpus to address data scarcity for low-resource NLP.",
       "Pretrained BERT, RoBERTa, and GPT-2 with instruction tuning, outperforming prior models on Nep-gLUE by +2 points and notable gains in Nepali text generation quality.",
@@ -51,6 +51,20 @@ const experiences: Experience[] = [
     ],
     skills: ["Data Collection", "Pre-Training", "Benchmarking", "NLP"],
     logo: "/logos/KU_Logo.png?height=80&width=80",
+  },
+  {
+    id: "exp4",
+    role: "Co-founder & Researcher",
+    company: "Institute for Research and Innovation in Intelligent Systems (IRIIS)",
+    location: "Kathmandu, Nepal",
+    period: "2024.12 - Present",
+    description: [
+      "Developing and analyzing reasoning-oriented transformer models to improve model interpretability and reliability.",
+      "Create intuitive, visual educational materials on probability theory and CUDA programming, inspired by 3Blue1Brown’s interactive teaching style.",
+      "Investigate the internal mechanisms of in-context learning using circuit analysis and activation probing to understand how transformers perform reasoning without parameter updates.",
+    ],
+    skills: ["Data Collection", "Pre-Training", "Benchmarking", "NLP"],
+    logo: "/logos/Iriis_logo.png?height=80&width=80",
   },
   {
     id: "exp3",
@@ -67,7 +81,7 @@ const experiences: Experience[] = [
     logo: "/logos/Modulo_Research_logo.png?height=80&width=80",
   },
   {
-    id: "exp4",
+    id: "exp2",
     role: "ML Engineer",
     company: "Virtly IT & Business Solutions Sarl (ICEBRKR)",
     location: "Geneva, Switzerland",
@@ -81,7 +95,7 @@ const experiences: Experience[] = [
     logo: "/logos/icebrkr_logo.png?height=80&width=80",
   },
   {
-    id: "exp5",
+    id: "exp1",
     role: "ML/CV Engineer",
     company: "LogicTronix",
     location: "Lalitpur, Nepal",
