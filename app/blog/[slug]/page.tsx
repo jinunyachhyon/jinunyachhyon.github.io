@@ -6,6 +6,9 @@ import { formatDate } from "@/lib/blog"
 import BlogSeriesNavigation from "@/components/blog-series-navigation"
 import BlogTOC from "@/components/blog-toc"
 import ReactMarkdown from "react-markdown"
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
+import 'katex/dist/katex.min.css'
 import Link from "next/link"
 
 // Add this to force dynamic rendering
@@ -109,6 +112,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="md:col-span-9 md:order-1 order-2">
           <div className="prose dark:prose-invert max-w-none">
             <ReactMarkdown
+              remarkPlugins={[remarkMath]}
+              rehypePlugins={[rehypeKatex]}
               components={{
                 h1: ({ children, ...props }) => {
                   const text = children?.toString() || ''

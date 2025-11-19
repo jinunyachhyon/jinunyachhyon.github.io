@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Jinu Nyachhyon",
-  description: "ML Engineer | AI Researcher",
+  description: "AI Researcher | ML Engineer",
   generator: 'v0.dev',
   icons: {
     icon: '/images/my_good_face.jpg',

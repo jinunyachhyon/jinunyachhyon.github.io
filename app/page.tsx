@@ -32,17 +32,17 @@ export default function BioPage() {
             </div>
             <div className="space-y-4">
               <h1 className="text-3xl font-bold">Jinu Nyachhyon</h1>
-              <p className="text-muted-foreground">AI Developer | AI Researcher</p>
+              <p className="text-muted-foreground">AI Researcher | ML Engineer</p>
 
               <div className="flex gap-4">
                 <Link
-                  href="https://x.com/nyachhyonjinu"
+                  href="https://scholar.google.com/citations?user=U6u0FcoAAAAJ&hl=en&oi=sra"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground"
                 >
-                  <Twitter className="h-5 w-5" />
-                  <span className="sr-only">Twitter</span>
+                  <BookOpen className="h-5 w-5" />
+                  <span className="sr-only">Google Scholar</span>
                 </Link>
                 <Link
                   href="https://github.com/jinunyachhyon"
@@ -62,18 +62,18 @@ export default function BioPage() {
                   <Linkedin className="h-5 w-5" />
                   <span className="sr-only">LinkedIn</span>
                 </Link>
-                <Link href="mailto:nyachhyonjinu@gmail.com" className="text-muted-foreground hover:text-foreground">
-                  <Mail className="h-5 w-5" />
-                  <span className="sr-only">Email</span>
-                </Link>
                 <Link
-                  href="https://scholar.google.com/citations?user=U6u0FcoAAAAJ&hl=en&oi=sra"
+                  href="https://x.com/nyachhyonjinu"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground"
                 >
-                  <BookOpen className="h-5 w-5" />
-                  <span className="sr-only">Google Scholar</span>
+                  <Twitter className="h-5 w-5" />
+                  <span className="sr-only">Twitter</span>
+                </Link>
+                <Link href="mailto:nyachhyonjinu@gmail.com" className="text-muted-foreground hover:text-foreground">
+                  <Mail className="h-5 w-5" />
+                  <span className="sr-only">Email</span>
                 </Link>
               </div>
 
@@ -109,9 +109,8 @@ export default function BioPage() {
                 achieving over 90% reduction in per-customer processing time.
               </p>
               <p>
-                My research interests lie at the intersection of deep learning, computer vision, and natural language
-                processing. I am particularly interested in developing models that can learn from limited labeled data
-                and generalize well to new tasks and domains.
+                My research interests lie at the intersection of Deep Learning, Vision-Language-Action, AI Alignment, and Interpretability.
+                I'm driven by curiosity to explore problems across the full AI pipeline, always working toward building AI systems that are both capable and trustworthy.
               </p>
             </div>
           </section>
@@ -149,34 +148,6 @@ export default function BioPage() {
               </Card>
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="font-bold mb-2">Computer Vision</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Object detection, image segmentation, and visual reasoning with limited supervision.
-                  </p>
-                  <div className="flex gap-1 flex-wrap">
-                    <Button variant="outline" size="sm" asChild>
-                      <Link href="/publications?tags=Computer%20Vision" scroll={true}>
-                        <FileText className="mr-1 h-3 w-3" />
-                        Publications
-                      </Link>
-                    </Button>
-                    <Button variant="outline" size="sm" asChild>
-                      <Link href="/experience?skills=Computer%20Vision" scroll={true}>
-                        <Briefcase className="mr-1 h-3 w-3" />
-                        Experience
-                      </Link>
-                    </Button>
-                    <Button variant="outline" size="sm" asChild>
-                      <Link href="/blog?tags=Computer%20Vision" scroll={true}>
-                        <PenTool className="mr-1 h-3 w-3" />
-                        Blog
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
                   <h3 className="font-bold mb-2">AI Alignment</h3>
                   <p className="text-muted-foreground mb-4">
                     Fairness, interpretability, and robustness of machine learning models.
@@ -196,6 +167,34 @@ export default function BioPage() {
                     </Button>
                     <Button variant="outline" size="sm" asChild>
                       <Link href="/blog?tags=Responsible%20AI" scroll={true}>
+                        <PenTool className="mr-1 h-3 w-3" />
+                        Blog
+                      </Link>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="font-bold mb-2">Computer Vision</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Object detection, image segmentation, and visual reasoning with limited supervision.
+                  </p>
+                  <div className="flex gap-1 flex-wrap">
+                    <Button variant="outline" size="sm" asChild>
+                      <Link href="/publications?tags=Computer%20Vision" scroll={true}>
+                        <FileText className="mr-1 h-3 w-3" />
+                        Publications
+                      </Link>
+                    </Button>
+                    <Button variant="outline" size="sm" asChild>
+                      <Link href="/experience?skills=Computer%20Vision" scroll={true}>
+                        <Briefcase className="mr-1 h-3 w-3" />
+                        Experience
+                      </Link>
+                    </Button>
+                    <Button variant="outline" size="sm" asChild>
+                      <Link href="/blog?tags=Computer%20Vision" scroll={true}>
                         <PenTool className="mr-1 h-3 w-3" />
                         Blog
                       </Link>
