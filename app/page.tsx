@@ -34,47 +34,80 @@ export default function BioPage() {
               <h1 className="text-3xl font-bold">Jinu Nyachhyon</h1>
               <p className="text-muted-foreground">AI Researcher | ML Engineer</p>
 
-              <div className="flex gap-4">
-                <Link
-                  href="https://scholar.google.com/citations?user=U6u0FcoAAAAJ&hl=en&oi=sra"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  <BookOpen className="h-5 w-5" />
-                  <span className="sr-only">Google Scholar</span>
-                </Link>
-                <Link
-                  href="https://github.com/jinunyachhyon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  <Github className="h-5 w-5" />
-                  <span className="sr-only">GitHub</span>
-                </Link>
-                <Link
-                  href="https://www.linkedin.com/in/jinu-nyachhyon/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
-                </Link>
-                <Link
-                  href="https://x.com/nyachhyonjinu"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  <Twitter className="h-5 w-5" />
-                  <span className="sr-only">Twitter</span>
-                </Link>
-                <Link href="mailto:nyachhyonjinu@gmail.com" className="text-muted-foreground hover:text-foreground">
-                  <Mail className="h-5 w-5" />
-                  <span className="sr-only">Email</span>
-                </Link>
+              <div className="space-y-3">
+                <div className="flex gap-4">
+                  <Link
+                    href="https://scholar.google.com/citations?user=U6u0FcoAAAAJ&hl=en&oi=sra"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground"
+                  >
+                    <BookOpen className="h-5 w-5" />
+                    <span className="sr-only">Google Scholar</span>
+                  </Link>
+                  <Link
+                    href="https://www.linkedin.com/in/jinu-nyachhyon/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                    <span className="sr-only">LinkedIn</span>
+                  </Link>
+                  <Link
+                    href="https://x.com/nyachhyonjinu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground"
+                  >
+                    <Twitter className="h-5 w-5" />
+                    <span className="sr-only">Twitter</span>
+                  </Link>
+                </div>
+                
+                {/* GitHub Links */}
+                <div className="flex items-center gap-2">
+                  <Github className="h-4 w-4 text-muted-foreground" />
+                  <div className="flex gap-2 text-sm">
+                    <Link
+                      href="https://github.com/jinunyachhyon"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-foreground hover:underline"
+                    >
+                      Personal
+                    </Link>
+                    <span className="text-muted-foreground">•</span>
+                    <Link
+                      href="https://github.com/jinu-code"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-foreground hover:underline"
+                    >
+                      Work
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Email Links */}
+                <div className="flex items-center gap-2">
+                  <Mail className="h-4 w-4 text-muted-foreground" />
+                  <div className="flex gap-2 text-sm">
+                    <Link
+                      href="mailto:nyachhyonjinu@gmail.com"
+                      className="text-muted-foreground hover:text-foreground hover:underline"
+                    >
+                      Personal
+                    </Link>
+                    <span className="text-muted-foreground">•</span>
+                    <Link
+                      href="mailto:jinu.075bct021@acem.edu.np"
+                      className="text-muted-foreground hover:text-foreground hover:underline"
+                    >
+                      School
+                    </Link>
+                  </div>
+                </div>
               </div>
 
               <div className="flex gap-2">
