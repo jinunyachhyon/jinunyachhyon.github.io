@@ -147,8 +147,6 @@ export default function PublicationsPage() {
         <div>
           <h1 className="text-4xl font-bold mb-4">Publications</h1>
           <p className="text-muted-foreground max-w-3xl">
-            My research focuses on advancing low-resource language, benchmarking, exploring AI alignment
-            for safer systems, and applying cutting-edge computer vision methods to real-world problems. 
             Below is a list of my publications.
           </p>
         </div>
