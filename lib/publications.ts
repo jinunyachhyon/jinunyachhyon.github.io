@@ -44,7 +44,7 @@ export const publications: Publication[] = [
   {
     id: "2025.chipsal-1.2",
     title: "Development of Pre-Trained Transformer-based Models for the Nepali Language",
-    authors: "Prajwal Thapa, Jinu Nyachhyon, Mridul Sharma, Bal Krishna Bal",
+    authors: "Prajwal Thapa, Jinu Nyachhyon, Mridul Sharma, Bal Krishna Bal (Joint First Author)",
     conference: "(CHiPSAL) COLING, 2025",
     year: 2025,
     abstract:
