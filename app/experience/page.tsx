@@ -25,17 +25,31 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
+    id: "exp7",
+    role: "Open Science Research Fellow",
+    company: "Manifold Research Group",
+    location: "USA",
+    period: "2025.10 - Present",
+    description: [
+      "Developed LLM-driven software control agents on Mind2Web, conducting systematic comparisons of models in complex, real-world web environments.",
+      "Developed trajectory generation and perturbation pipelines for training and stress-testing agents.",
+      "Conducted systematic analysis of agent behavior, focusing on spatial reasoning, tool use, and action grounding failures.",
+    ],
+    skills: ["LLM-Aided Agents", "Software Control Agents", "Agent Benchmarking", "Trajectory Generation"],
+    logo: "/logos/manifold_logo.jpeg?height=80&width=80",
+  },
+  {
     id: "exp6",
     role: "AI Developer",
     company: "InsydeAI LLC",
     location: "Maryland, USA",
     period: "2025.01 - Present",
     description: [
-      "Developed AI agents for financial calculations, multi-scenario analysis, and automated email drafting.",
+      "Developed LLM-based agents for financial calculations, multi-scenario analysis, and automated email drafting.",
       "Cut processing time by 90%+, boosting officer capacity 10×.",
       "Improved response accuracy, consistency, and customer experience.",
     ],
-    skills: ["AI Agent", "Automation", "NLP", "FastAPI"],
+    skills: ["LLM-Aided Agents", "Automation", "NLP", "FastAPI"],
     logo: "/logos/insyde_ai_logo.jpeg?height=80&width=80",
   },
   {
@@ -129,19 +143,19 @@ const projects: Project[] = [
   },
   {
     id: "proj2",
-    title: "CV Models Quantization for Edge Devices",
+    title: "LLM-Driven Software Control Agents",
+    description:
+      "Developed and benchmarked LLM-driven software control agents on Mind2Web, including trajectory generation and perturbation pipelines.",
+    technologies: ["LLM-Aided Agents", "Multi-Agent Systems", "AI Alignment", "Mind2Web"],
+    link: "",
+  },
+  {
+    id: "proj3",
+    title: "Models Quantization for Edge Devices",
     description:
       "A tutorial on quantizing computer vision models for efficient edge deployment, covering model implementation and optimization in PyTorch, and quantization techniques for DPU (Deep Processing Unit) inference using Vitis AI.",
     technologies: ["PyTorch", "Quantization", "C++", "Vitis AI"],
     link: "https://github.com/LogicTronix/Vitis-AI-Reference-Tutorials",
-  },
-  {
-    id: "proj3",
-    title: "Drug Target Integration",
-    description:
-      "Our model predicts binding affinity across a diverse set of drugs and target groups. Drug-target interaction prediction task aims to predict the interaction activity score in silico given only the accessible compound structural information and protein amino acid sequence.",
-    technologies: ["DeepPurpose", "DTI", "Bioinformatics"],
-    link: "https://github.com/jinunyachhyon/Drug-Target-Integration",
   },
 ]
 
@@ -222,9 +236,6 @@ export default function ExperiencePage() {
         <div>
           <h1 className="text-4xl font-bold mb-4">Experience</h1>
           <p className="text-muted-foreground max-w-3xl">
-            My professional journey spans impactful roles in both academia and industry, 
-            where I have worked on building high-performing Nepali language models, benchmarking datasets, 
-            and practical AI tools now adopted by thousands of users.
             Below is a summary of my experience and projects.
           </p>
         </div>
