@@ -132,18 +132,15 @@ export default function BioPage() {
             <h2 className="text-2xl font-bold">About Me</h2>
             <div className="prose dark:prose-invert max-w-none">
               <p>
-                I am an AI Researcher at the Information and Language Processing Research Lab (ILPRL) at 
-                Kathmandu University, working under the supervision of Prof. Bal Krishna Bal. 
-                My research focuses on low-resource language modeling, with an emphasis on generalization.
+                I am a research-focused AI engineer working on LLM-driven agents and program reasoning. 
+                At <b>Manifold Research</b>, I develop and benchmark software control agents, 
+                building trajectory generation and stress-testing pipelines to evaluate robustness under distribution shifts. 
+                At <b>Insyde AI</b>, I design LLM-aided agent pipelines for multi-scenario reasoning, tool use, and end-to-end automation, 
+                achieving significant efficiency gains.
               </p>
               <p>
-                I am also an AI Engineer at Insyde AI, where I have developed and deployed AI agents to 
-                automate financial calculations, multi-scenario evaluations, and user-facing email generation, 
-                achieving over 90% reduction in per-customer processing time.
-              </p>
-              <p>
-                My research interests lie at the intersection of Deep Learning, Vision-Language-Action, AI Alignment, and Interpretability.
-                I'm driven by curiosity to explore problems across the full AI pipeline, always working toward building AI systems that are both capable and trustworthy.
+                My research interests lie in <b>LLM-aided program analysis, trustworthy and aligned AI, and secure multi-agent reasoning systems</b>, 
+                with a focus on building scalable, interpretable, and robust agent frameworks.
               </p>
             </div>
           </section>
@@ -209,6 +206,34 @@ export default function BioPage() {
               </Card>
               <Card>
                 <CardContent className="p-6">
+                  <h3 className="font-bold mb-2">LLM-Aided Agents</h3>
+                  <p className="text-muted-foreground mb-4">
+                    LLM-driven agents, multi-agent reasoning, and end-to-end task automation.
+                  </p>
+                  <div className="flex gap-1 flex-wrap">
+                    <Button variant="outline" size="sm" asChild>
+                      <Link href="/publications?tags=LLM-Aided%20Agents" scroll={true}>
+                        <FileText className="mr-1 h-3 w-3" />
+                        Publications
+                      </Link>
+                    </Button>
+                    <Button variant="outline" size="sm" asChild>
+                      <Link href="/experience?skills=LLM-Aided%20Agents" scroll={true}>
+                        <Briefcase className="mr-1 h-3 w-3" />
+                        Experience
+                      </Link>
+                    </Button>
+                    <Button variant="outline" size="sm" asChild>
+                      <Link href="/blog?tags=LLM-Aided%20Agents" scroll={true}>
+                        <PenTool className="mr-1 h-3 w-3" />
+                        Blog
+                      </Link>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
                   <h3 className="font-bold mb-2">Computer Vision</h3>
                   <p className="text-muted-foreground mb-4">
                     Object detection, image segmentation, and visual reasoning with limited supervision.
@@ -228,34 +253,6 @@ export default function BioPage() {
                     </Button>
                     <Button variant="outline" size="sm" asChild>
                       <Link href="/blog?tags=Computer%20Vision" scroll={true}>
-                        <PenTool className="mr-1 h-3 w-3" />
-                        Blog
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="font-bold mb-2">Reinforcement Learning</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Sample-efficient RL, multi-agent systems, and applications to robotics.
-                  </p>
-                  <div className="flex gap-1 flex-wrap">
-                    <Button variant="outline" size="sm" asChild>
-                      <Link href="/publications?tags=Reinforcement%20Learning" scroll={true}>
-                        <FileText className="mr-1 h-3 w-3" />
-                        Publications
-                      </Link>
-                    </Button>
-                    <Button variant="outline" size="sm" asChild>
-                      <Link href="/experience?skills=Reinforcement%20Learning" scroll={true}>
-                        <Briefcase className="mr-1 h-3 w-3" />
-                        Experience
-                      </Link>
-                    </Button>
-                    <Button variant="outline" size="sm" asChild>
-                      <Link href="/blog?tags=Reinforcement%20Learning" scroll={true}>
                         <PenTool className="mr-1 h-3 w-3" />
                         Blog
                       </Link>
