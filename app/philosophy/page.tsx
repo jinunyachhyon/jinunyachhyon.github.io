@@ -18,9 +18,10 @@ export default function PhilosophyPage() {
           <h2 className="text-2xl font-bold">Research Philosophy</h2>
           <div className="prose dark:prose-invert max-w-none">
             <p>
-              My research philosophy is centered around the pursuit of knowledge that advances both our theoretical
-              understanding of artificial intelligence and its practical applications. I believe that the most impactful
-              research lies at the intersection of these two domains.
+              My research philosophy is centered around building AI systems that are not only theoretically sound but also practically useful. 
+              I focus on understanding and developing LLM-driven agents and multi-agent reasoning systems, systematically analyzing their behavior, 
+              robustness, and decision-making under real-world conditions. 
+              I strive to advance trustworthy, aligned, and interpretable AI, combining rigorous methodology with open science principles.
             </p>
             <p>
               I am driven by curiosity and a desire to understand the fundamental principles that govern learning and
@@ -58,9 +59,8 @@ export default function PhilosophyPage() {
             </p>
             <h3>Human-Centered AI</h3>
             <p>
-              AI should be designed with human needs, values, and well-being at its core. This means developing systems
-              that are interpretable, trustworthy, and aligned with human values. It also means ensuring that the
-              benefits of AI are broadly shared and that potential harms are minimized.
+              AI should complement human intelligence, augmenting decision-making through collaborative agent systems. 
+              It should remain interpretable, aligned with human values, and robust against misuse or unintended behaviors.
             </p>
             <h3>Interdisciplinary Collaboration</h3>
             <p>
@@ -92,11 +92,11 @@ export default function PhilosophyPage() {
             </Card>
             <Card>
               <CardContent className="p-6">
-                <h3 className="font-bold text-lg mb-2">Sample Efficiency</h3>
+                <h3 className="font-bold text-lg mb-2">LLM-Aided Agents</h3>
                 <p className="text-muted-foreground">
-                  Current AI systems often require large amounts of data and computation to learn effectively. Improving
-                  sample efficiency is crucial for making AI more accessible and sustainable, and for enabling
-                  applications in domains where data is scarce.
+                  Developing robust, interpretable, and aligned LLM-driven agent systems is challenging due to environment complexity, 
+                  action grounding failures, and multi-agent interactions. 
+                  Evaluating and stress-testing these agents is essential for building trustworthy, real-world AI systems.
                 </p>
               </CardContent>
             </Card>
@@ -137,23 +137,16 @@ export default function PhilosophyPage() {
           <h2 className="text-2xl font-bold">Future Directions</h2>
           <div className="prose dark:prose-invert max-w-none">
             <p>Looking ahead, I am particularly excited about several emerging directions in AI research:</p>
+            <h3>AI Alignment and Trustworthy Agents</h3>
+            <p>
+              Developing agent systems that are aligned with human intentions and robust under diverse scenarios is an emerging frontier. 
+              Research in stress-testing, trajectory perturbation, and multi-agent reasoning can enable safer and more reliable LLM-driven AI.
+            </p>
             <h3>Multimodal Learning</h3>
             <p>
               The ability to learn from and reason about multiple modalities (e.g., vision, language, audio) is a key
               aspect of human intelligence. Developing AI systems that can effectively integrate information across
               modalities will enable new applications and insights.
-            </p>
-            <h3>Self-Supervised Learning</h3>
-            <p>
-              Self-supervised learning, which leverages the structure of unlabeled data to learn useful representations,
-              has shown tremendous promise in recent years. Advancing this paradigm will be crucial for making AI more
-              data-efficient and accessible.
-            </p>
-            <h3>AI for Scientific Discovery</h3>
-            <p>
-              AI has the potential to accelerate scientific discovery across domains such as drug discovery, materials
-              science, and climate modeling. Developing AI systems that can assist scientists in generating hypotheses,
-              designing experiments, and analyzing data is an exciting frontier.
             </p>
             <h3>Neurosymbolic AI</h3>
             <p>
