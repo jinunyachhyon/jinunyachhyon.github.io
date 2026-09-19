@@ -12,9 +12,6 @@ export const metadata: Metadata = {
   title: "Jinu Nyachhyon",
   description: "AI Researcher | ML Engineer",
   generator: 'v0.dev',
-  icons: {
-    icon: '/images/my_good_face.jpg',
-  },
 }
 
 export default function RootLayout({
