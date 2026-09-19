@@ -4,7 +4,6 @@ const isPages = process.env.GITHUB_PAGES === 'true'
 const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ['gray-matter'],
-    appDir: true,
   },
 
   // Only export static site when building for GitHub Pages

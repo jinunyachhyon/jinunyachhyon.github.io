@@ -12,6 +12,7 @@ const navigation = [
   { name: "Bio", href: "/" },
   { name: "Publications", href: "/publications" },
   { name: "Experience", href: "/experience" },
+  { name: "Teaching", href: "/teaching" },
   { name: "Blog", href: "/blog" },
   { name: "My Philosophy", href: "/philosophy" },
 ]

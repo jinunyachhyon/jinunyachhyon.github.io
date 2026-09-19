@@ -347,14 +347,18 @@ function PublicationCard({ publication }: { publication: Publication }) {
           <Badge variant="outline">{publication.year}</Badge>
         </div>
         <CardTitle className="text-xl">
-          <Link
-            href={publication.arxivUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-primary transition-colors"
-          >
-            {publication.title}
-          </Link>
+          {publication.arxivUrl || publication.pdfUrl ? (
+            <Link
+              href={publication.arxivUrl || publication.pdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              {publication.title}
+            </Link>
+          ) : (
+            publication.title
+          )}
         </CardTitle>
         <p className="text-muted-foreground">{publication.authors}</p>
         <div className="text-sm">
@@ -371,25 +375,31 @@ function PublicationCard({ publication }: { publication: Publication }) {
           ))}
         </div>
       </CardContent>
-      <CardFooter className="flex gap-2">
-        <Button variant="outline" size="sm" asChild>
-          <Link href={publication.pdfUrl} target="_blank" rel="noopener noreferrer">
-            <FileText className="mr-2 h-4 w-4" />
-            PDF
-          </Link>
-        </Button>
-        <Button variant="outline" size="sm" asChild>
-          <Link href={publication.codeUrl} target="_blank" rel="noopener noreferrer">
-            <ExternalLink className="mr-2 h-4 w-4" />
-            Code
-          </Link>
-        </Button>
-        <Button variant="outline" size="sm" asChild>
-          <Link href={publication.arxivUrl} target="_blank" rel="noopener noreferrer">
-            <ExternalLink className="mr-2 h-4 w-4" />
-            arXiv
-          </Link>
-        </Button>
+      <CardFooter className="flex flex-wrap gap-2">
+        {publication.pdfUrl && (
+          <Button variant="outline" size="sm" asChild>
+            <Link href={publication.pdfUrl} target="_blank" rel="noopener noreferrer">
+              <FileText className="mr-2 h-4 w-4" />
+              PDF
+            </Link>
+          </Button>
+        )}
+        {publication.codeUrl && (
+          <Button variant="outline" size="sm" asChild>
+            <Link href={publication.codeUrl} target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="mr-2 h-4 w-4" />
+              Code
+            </Link>
+          </Button>
+        )}
+        {publication.arxivUrl && (
+          <Button variant="outline" size="sm" asChild>
+            <Link href={publication.arxivUrl} target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="mr-2 h-4 w-4" />
+              arXiv
+            </Link>
+          </Button>
+        )}
       </CardFooter>
     </Card>
   )
