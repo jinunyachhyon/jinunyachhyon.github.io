@@ -14,6 +14,34 @@ export interface Publication {
 
 export const publications: Publication[] = [
   {
+    id: "2610.15732",
+    title: "NepPlural: A Human-Anchored Benchmark for Persona Annotation in Nepali Migration Discourse",
+    authors: "Jinu Nyachhyon, Anish Khatiwada, Bimal Timilsina",
+    conference: "(PlurVA-LLM) AACL-IJCNLP, 2026",
+    year: 2026,
+    abstract:
+      "We introduced NepPlural, a benchmark of 2,148 code-mixed Nepali YouTube comments on youth migration, annotated with a four-axis persona taxonomy and a 300-comment gold set labelled by native speakers. We found that LLM annotation reliability depends heavily on protocol: batched chat labels barely agree, while per-comment annotation with an abstention option lets models match or exceed individual native speakers. A steerability probe shows frontier models adopt single persona axes well but rarely compose full personas.",
+    tags: ["NLP", "Pluralistic Alignment", "Benchmarking", "LLM Annotation"],
+    pdfUrl: "https://arxiv.org/pdf/2610.15732",
+    codeUrl: "https://github.com/iriis-research/NepPlural",
+    arxivUrl: "https://arxiv.org/abs/2610.15732",
+    publicationType: "conference",
+  },
+  {
+    id: "2604.14262",
+    title: "GUI-Perturbed: Domain Randomization Reveals Systematic Brittleness in GUI Grounding Models",
+    authors: "Yangyue Wang, Harshvardhan Sikka, Yash Mathur, Tony Zhou, Jinu Nyachhyon, Pranav Guruprasad",
+    conference: "(AABA4ET) NeurIPS, 2026",
+    year: 2026,
+    abstract:
+      "We introduced GUI-Perturbed, a controlled perturbation framework that independently varies visual scenes and instructions to measure GUI grounding robustness. Although grounding models report over 85% accuracy on standard benchmarks, they drop 27–56 percentage points when instructions require spatial reasoning, degrade significantly under 70% browser zoom, and get worse rather than better with rank-8 LoRA fine-tuning on augmented data. We release the dataset, augmentation pipeline, and a fine-tuned model.",
+    tags: ["GUI Agents", "Visual Grounding", "Robustness", "Domain Randomization"],
+    pdfUrl: "https://arxiv.org/pdf/2604.14262",
+    codeUrl: "https://github.com/ManifoldRG/GUI-DR",
+    arxivUrl: "https://arxiv.org/abs/2604.14262",
+    publicationType: "conference",
+  },
+  {
     id: "cs.HC",
     title: "Confirmation bias: A challenge for scalable oversight",
     authors: "Gabriel Recchia, Chatrik Singh Mangat, Jinu Nyachhyon, Mridul Sharma, Callum Canavan, Dylan Epstein-Gross, Muhammed Abdulbari",
