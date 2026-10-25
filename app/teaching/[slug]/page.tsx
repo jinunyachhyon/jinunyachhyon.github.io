@@ -57,10 +57,13 @@ export default function CoursePage({ params }: CoursePageProps) {
         </div>
 
         <h1 className="text-4xl font-bold mb-2">
-          {course.courseCode ? `${course.courseCode} — ` : ""}
+          {course.courseCode ? `${course.courseCode} - ` : ""}
           {course.title}
         </h1>
-        <p className="text-lg text-muted-foreground mb-1">{course.role}</p>
+        <p className="text-lg text-muted-foreground mb-1">
+          {course.role}
+          {!course.homeInstitution && course.institution ? ` · ${course.institution}` : ""}
+        </p>
         {course.homeInstitution && (
           <p className="text-sm text-muted-foreground mb-5">
             Visiting from {course.homeInstitution}

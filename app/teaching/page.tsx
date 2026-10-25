@@ -44,12 +44,14 @@ export default function TeachingPage() {
                       <div className="flex items-start justify-between gap-4">
                         <div>
                           <h3 className="text-xl font-bold">
-                            {course.courseCode ? `${course.courseCode} — ` : ""}
+                            {course.courseCode ? `${course.courseCode} - ` : ""}
                             {course.title}
                           </h3>
                           <p className="text-muted-foreground mt-1">
                             {course.role}
-                            {course.homeInstitution ? ` · visiting from ${course.homeInstitution}` : ""}
+                            {course.homeInstitution
+                              ? ` · visiting from ${course.homeInstitution}`
+                              : course.institution ? ` · ${course.institution}` : ""}
                           </p>
                         </div>
                         <ChevronRight className="h-5 w-5 text-muted-foreground shrink-0 mt-1" />
