@@ -15,7 +15,7 @@ export default function TeachingPage() {
   return (
     <div className="container py-10 max-w-5xl">
       <div className="mb-10">
-        <h1 className="text-4xl font-bold mb-4">Teaching</h1>
+        <h1 className="text-4xl font-bold tracking-tight mb-4">Teaching</h1>
         <p className="text-muted-foreground max-w-3xl">
           Courses I have designed and taught as an assistant lecturer. Each entry links to the
           syllabus, lecture-by-lecture outline and the materials I wrote for it.

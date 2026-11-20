@@ -22,19 +22,21 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
+    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70">
+      <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2" scroll={true}>
-            <span className="hidden font-bold sm:inline-block">Jinu Nyachhyon</span>
+            <span className="hidden font-semibold tracking-tight sm:inline-block">Jinu Nyachhyon</span>
           </Link>
-          <nav className="flex items-center space-x-6 text-sm font-medium">
+          <nav className="flex items-center gap-1 text-sm">
             {navigation.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`transition-colors hover:text-foreground/80 ${
-                  pathname === item.href ? "text-foreground" : "text-foreground/60"
+                className={`rounded-full px-3 py-1.5 transition-colors ${
+                  pathname === item.href
+                    ? "bg-muted font-medium text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
                 scroll={true}
               >
@@ -61,7 +63,7 @@ export default function Header() {
               onClick={() => setIsOpen(false)}
               scroll={true}
             >
-              <span className="font-bold">Jinu Nyachhyon</span>
+              <span className="font-semibold">Jinu Nyachhyon</span>
             </Link>
             <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
               <div className="flex flex-col space-y-3">
@@ -85,7 +87,7 @@ export default function Header() {
         
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
           <div className="w-full flex-1 md:w-auto md:flex-none">
-            <Link href="/" className="font-bold md:hidden" scroll={true}>
+            <Link href="/" className="font-semibold tracking-tight md:hidden" scroll={true}>
               Jinu Nyachhyon
             </Link>
           </div>

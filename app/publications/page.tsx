@@ -145,7 +145,7 @@ export default function PublicationsPage() {
     <div className="container py-10 max-w-7xl">
       <div className="space-y-8">
         <div>
-          <h1 className="text-4xl font-bold mb-4">Publications</h1>
+          <h1 className="text-4xl font-bold tracking-tight mb-4">Publications</h1>
           <p className="text-muted-foreground max-w-3xl">
             Below is a list of my publications.
           </p>

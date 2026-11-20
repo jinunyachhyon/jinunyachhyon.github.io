@@ -214,7 +214,7 @@ export default function BlogClientPage({ initialPosts, initialSeries }: BlogClie
   return (
     <div className="container py-10">
       <div className="max-w-4xl mx-auto mb-10">
-        <h1 className="text-4xl font-bold mb-4">Blog</h1>
+        <h1 className="text-4xl font-bold tracking-tight mb-4">Blog</h1>
         <p className="text-xl text-muted-foreground">
           Thoughts on AI, machine learning, and technology
         </p>

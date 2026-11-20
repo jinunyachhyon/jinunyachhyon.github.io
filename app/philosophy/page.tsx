@@ -7,7 +7,7 @@ export default function PhilosophyPage() {
     <div className="container py-10 max-w-7xl">
       <div className="space-y-10 max-w-4xl mx-auto">
         <div>
-          <h1 className="text-4xl font-bold mb-4">My Philosophy</h1>
+          <h1 className="text-4xl font-bold tracking-tight mb-4">My Philosophy</h1>
           <p className="text-muted-foreground">
             My approach to research and artificial intelligence is guided by a set of core principles and beliefs. Here,
             I share my thoughts on the field, its challenges, and its future.

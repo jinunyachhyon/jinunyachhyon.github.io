@@ -12,8 +12,11 @@ import { Search, Filter } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
+type ExperienceCategory = "research" | "industry" | "teaching"
+
 interface Experience {
   id: string
+  category: ExperienceCategory
   role: string
   company: string
   location: string
@@ -21,24 +24,27 @@ interface Experience {
   description: string[]
   skills: string[]
   logo: string
+  supervisor?: { name: string; href: string }
 }
 
 const experiences: Experience[] = [
   {
-    id: "exp8",
-    role: "Assistant Lecturer",
-    company: "Herald College Kathmandu (University of Wolverhampton)",
+    id: "exp4",
+    category: "research",
+    role: "Co-founder & Researcher",
+    company: "Institute for Research and Innovation in Intelligent Systems (IRIIS)",
     location: "Kathmandu, Nepal",
-    period: "2026.03 - Present",
+    period: "2026.02 - Present",
     description: [
-      "Deliver tutorials and workshops spanning classical deep learning through to modern agentic AI systems, integrating mathematical foundations with hands-on implementation.",
-      "Design and supervise implementation-based learning (e.g., MNIST and Devanagari datasets, agent-based automation builds), mentoring group and individual work with emphasis on correct methodology and consistency.",
+      "Designing a formal evaluation framework for LLM agents with an explicit episode schema and multi-dimensional scoring, moving beyond single-number task success rates.",
+      "Constructing a benchmark for multistep instruction planning over real procedural domains, with gold solutions stored as partial-order DAGs to credit valid alternative orderings.",
     ],
-    skills: ["Teaching", "Deep Learning", "Agentic AI", "Curriculum Design", "Mentoring"],
-    logo: "/logos/Herald_logo.png?height=80&width=80",
+    skills: ["Agent Benchmarking", "LLM Evaluation", "Planning", "Research Leadership"],
+    logo: "/logos/Iriis_logo.png?height=80&width=80",
   },
   {
     id: "exp7",
+    category: "research",
     role: "Open Science Research Fellow",
     company: "Manifold Research Group",
     location: "USA (Remote)",
@@ -52,7 +58,39 @@ const experiences: Experience[] = [
     logo: "/logos/manifold_logo.jpeg?height=80&width=80",
   },
   {
+    id: "exp5",
+    category: "research",
+    role: "Research Assistant",
+    company: "Information and Language Processing Research Lab (ILPRL)",
+    location: "Kavre, Nepal",
+    period: "2024.07 - 2025.12",
+    description: [
+      "Led the design and release of the NLUE benchmark (12 Nepali NLU tasks), establishing a standardized evaluation suite for low-resource LLMs.",
+      "Assembled and processed a 27.5 GB Nepali text corpus addressing data scarcity.",
+      "Pretrained BERT, RoBERTa and GPT-2 with instruction tuning, achieving SOTA on Nep-gLUE; conducted comparative evaluation and error analysis.",
+    ],
+    skills: ["Data Collection", "Pre-Training", "Benchmarking", "NLP"],
+    logo: "/logos/KU_Logo.png?height=80&width=80",
+    supervisor: { name: "Dr. Bal Krishna Bal", href: "https://ku.edu.np/contact-detail/48" },
+  },
+  {
+    id: "exp3",
+    category: "research",
+    role: "Research Intern",
+    company: "Modulo Research Ltd.",
+    location: "Cambridge, UK (Remote)",
+    period: "2024.06 - 2024.08",
+    description: [
+      "Automated analysis of 20-minute screen recordings, refining scene change detection to 80% precision via URL change tracking and LLM-based event and detail extraction from video frames.",
+      "Conducted scalable oversight experiments by comparing LLM outputs with human annotations to assess and improve intent alignment.",
+    ],
+    skills: ["AI Alignment", "LLM Evaluation", "NLP"],
+    logo: "/logos/Modulo_Research_logo.png?height=80&width=80",
+    supervisor: { name: "Dr. Gabriel Recchia", href: "https://www.gabrielrecchia.com/" },
+  },
+  {
     id: "exp6",
+    category: "industry",
     role: "AI Developer",
     company: "Insyde AI",
     location: "Maryland, USA (Remote)",
@@ -66,47 +104,8 @@ const experiences: Experience[] = [
     logo: "/logos/insyde_ai_logo.jpeg?height=80&width=80",
   },
   {
-    id: "exp5",
-    role: "Research Assistant",
-    company: "Information and Language Processing Research Lab (ILPRL)",
-    location: "Kavre, Nepal",
-    period: "2024.07 - 2025.12",
-    description: [
-      "Led the design and release of the NLUE benchmark (12 Nepali NLU tasks), establishing a standardized evaluation suite for low-resource LLMs.",
-      "Assembled and processed a 27.5 GB Nepali text corpus addressing data scarcity.",
-      "Pretrained BERT, RoBERTa and GPT-2 with instruction tuning, achieving SOTA on Nep-gLUE; conducted comparative evaluation and error analysis.",
-    ],
-    skills: ["Data Collection", "Pre-Training", "Benchmarking", "NLP"],
-    logo: "/logos/KU_Logo.png?height=80&width=80",
-  },
-  {
-    id: "exp4",
-    role: "Co-founder & Researcher",
-    company: "Institute for Research and Innovation in Intelligent Systems (IRIIS)",
-    location: "Kathmandu, Nepal",
-    period: "2024.12 - Present",
-    description: [
-      "Designing a formal evaluation framework for LLM agents with an explicit episode schema and multi-dimensional scoring, moving beyond single-number task success rates.",
-      "Constructing a benchmark for multistep instruction planning over real procedural domains, with gold solutions stored as partial-order DAGs to credit valid alternative orderings.",
-    ],
-    skills: ["Agent Benchmarking", "LLM Evaluation", "Planning", "Research Leadership"],
-    logo: "/logos/Iriis_logo.png?height=80&width=80",
-  },
-  {
-    id: "exp3",
-    role: "Research Intern",
-    company: "Modulo Research Ltd.",
-    location: "Cambridge, UK (Remote)",
-    period: "2024.06 - 2024.08",
-    description: [
-      "Automated analysis of 20-minute screen recordings, refining scene change detection to 80% precision via URL change tracking and LLM-based event and detail extraction from video frames.",
-      "Conducted scalable oversight experiments by comparing LLM outputs with human annotations to assess and improve intent alignment.",
-    ],
-    skills: ["AI Alignment", "LLM Evaluation", "NLP"],
-    logo: "/logos/Modulo_Research_logo.png?height=80&width=80",
-  },
-  {
     id: "exp2",
+    category: "industry",
     role: "ML Engineer",
     company: "Virtly IT & Business Solutions Sarl (ICEBRKR)",
     location: "Geneva, Switzerland (Remote)",
@@ -120,6 +119,7 @@ const experiences: Experience[] = [
   },
   {
     id: "exp1",
+    category: "industry",
     role: "ML/CV Engineer",
     company: "LogicTronix",
     location: "Lalitpur, Nepal",
@@ -131,6 +131,20 @@ const experiences: Experience[] = [
     skills: ["Computer Vision", "Object Detection", "Quantization"],
     logo: "/logos/Logictronix-Logo.png?height=80&width=80",
   },
+  {
+    id: "exp8",
+    category: "teaching",
+    role: "Assistant Lecturer",
+    company: "Herald College Kathmandu (University of Wolverhampton)",
+    location: "Kathmandu, Nepal",
+    period: "2026.03 - 2026.10",
+    description: [
+      "Delivered tutorials and workshops spanning classical deep learning through to modern agentic AI systems, integrating mathematical foundations with hands-on implementation.",
+      "Designed and supervised implementation-based learning (e.g., MNIST and Devanagari datasets, agent-based automation builds), mentoring group and individual work with emphasis on correct methodology and consistency.",
+    ],
+    skills: ["Teaching", "Deep Learning", "Agentic AI", "Curriculum Design", "Mentoring"],
+    logo: "/logos/Herald_logo.png?height=80&width=80",
+  }
 ]
 
 interface Project {
@@ -143,6 +157,14 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: "proj0",
+    title: "NepPlural",
+    description:
+      "A human-anchored benchmark of 2,148 code-mixed Nepali YouTube comments on youth migration, annotated with a four-axis persona taxonomy and a 300-comment native-speaker gold set, used to test how reliably LLMs annotate and adopt personas.",
+    technologies: ["LLM Annotation", "Pluralistic Alignment", "Code-Mixed NLP", "Benchmarking"],
+    link: "https://github.com/iriis-research/NepPlural/tree/main",
+  },
+  {
     id: "proj1",
     title: "NLUE Benchmark",
     description:
@@ -152,20 +174,18 @@ const projects: Project[] = [
   },
   {
     id: "proj2",
-    title: "LLM-Driven Software Control Agents",
+    title: "GUI-Perturbed",
     description:
-      "Developed and benchmarked LLM-driven software control agents on Mind2Web, including trajectory generation and perturbation pipelines.",
-    technologies: ["LLM-Aided Agents", "Multi-Agent Systems", "AI Alignment", "Mind2Web"],
-    link: "",
+      "A controlled perturbation framework that independently varies visual scenes and instructions to test GUI grounding models, showing 27–56 point accuracy drops on spatial-reasoning instructions and significant degradation under browser zoom.",
+    technologies: ["GUI Agents", "Visual Grounding", "Robustness", "Domain Randomization"],
+    link: "https://github.com/ManifoldRG/GUI-DR",
   },
-  {
-    id: "proj3",
-    title: "Models Quantization for Edge Devices",
-    description:
-      "A tutorial on quantizing computer vision models for efficient edge deployment, covering model implementation and optimization in PyTorch, and quantization techniques for DPU (Deep Processing Unit) inference using Vitis AI.",
-    technologies: ["PyTorch", "Quantization", "C++", "Vitis AI"],
-    link: "https://github.com/LogicTronix/Vitis-AI-Reference-Tutorials",
-  },
+]
+
+const sections: { key: ExperienceCategory; title: string }[] = [
+  { key: "research", title: "Research Experience" },
+  { key: "industry", title: "Industry Experience" },
+  { key: "teaching", title: "Teaching Experience" },
 ]
 
 export default function ExperiencePage() {
@@ -239,13 +259,74 @@ export default function ExperiencePage() {
   const hasAppliedFilters = appliedSkills.length > 0
   const hasPendingChanges = JSON.stringify(pendingSkills.sort()) !== JSON.stringify(appliedSkills.sort())
 
+  const renderSection = ({ key, title }: { key: ExperienceCategory; title: string }) => {
+    const items = filteredExperiences.filter((exp) => exp.category === key)
+    if (items.length === 0) return null
+    return (
+      <section key={key} className="space-y-6">
+        <h2 className="text-2xl font-bold tracking-tight border-b border-border/70 pb-3">{title}</h2>
+        <div className="space-y-6">
+          {items.map((exp) => (
+              <Card key={exp.id} className="overflow-hidden">
+                <div className="md:flex">
+                  <div className="md:w-1/4 bg-muted p-6 flex flex-col justify-between">
+                    <div>
+                      <div className="mb-4 flex justify-center md:justify-start">
+                        <Image
+                          src={exp.logo || "/placeholder.svg"}
+                          alt={exp.company}
+                          width={80}
+                          height={80}
+                          className="rounded-md"
+                        />
+                      </div>
+                      <h3 className="font-bold text-lg">{exp.role}</h3>
+                      <p className="text-primary">{exp.company}</p>
+                      <p className="text-sm text-muted-foreground">{exp.location}</p>
+                      <p className="text-sm font-medium mt-2">{exp.period}</p>
+                      {exp.supervisor && (
+                        <p className="text-sm text-muted-foreground mt-2">
+                          Supervisor:{" "}
+                          <a
+                            href={exp.supervisor.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-foreground underline decoration-border underline-offset-4 hover:decoration-foreground"
+                          >
+                            {exp.supervisor.name}
+                          </a>
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="p-6 md:w-3/4">
+                    <ul className="list-disc pl-5 space-y-2 mb-4">
+                      {exp.description.map((item, index) => (
+                        <li key={index}>{item}</li>
+                      ))}
+                    </ul>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {exp.skills.map((skill) => (
+                        <Badge key={skill} variant="secondary">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Card>
+          ))}
+        </div>
+      </section>
+    )
+  }
   return (
     <div className="container py-10 max-w-7xl">
       <div className="space-y-10">
         <div>
-          <h1 className="text-4xl font-bold mb-4">Experience</h1>
+          <h1 className="text-4xl font-bold tracking-tight mb-4">Experience</h1>
           <p className="text-muted-foreground max-w-3xl">
-            Below is a summary of my experience and projects.
+            Research, industry and teaching experience, most recent first within each section.
           </p>
         </div>
 
@@ -319,71 +400,34 @@ export default function ExperiencePage() {
           </div>
         )}
 
-        <section className="space-y-6">
-          <h2 className="text-2xl font-bold">Work Experience</h2>
-          {filteredExperiences.length === 0 ? (
-            <div className="text-center py-10">
-              <p className="text-muted-foreground">No experience found matching your criteria.</p>
-            </div>
-          ) : (
-            <div className="space-y-6">
-              {filteredExperiences.map((exp) => (
-                <Card key={exp.id} className="overflow-hidden">
-                  <div className="md:flex">
-                    <div className="md:w-1/4 bg-muted p-6 flex flex-col justify-between">
-                      <div>
-                        <div className="mb-4 flex justify-center md:justify-start">
-                          <Image
-                            src={exp.logo || "/placeholder.svg"}
-                            alt={exp.company}
-                            width={80}
-                            height={80}
-                            className="rounded-md"
-                          />
-                        </div>
-                        <h3 className="font-bold text-lg">{exp.role}</h3>
-                        <p className="text-primary">{exp.company}</p>
-                        <p className="text-sm text-muted-foreground">{exp.location}</p>
-                        <p className="text-sm font-medium mt-2">{exp.period}</p>
-                      </div>
-                    </div>
-                    <div className="p-6 md:w-3/4">
-                      <ul className="list-disc pl-5 space-y-2 mb-4">
-                        {exp.description.map((item, index) => (
-                          <li key={index}>{item}</li>
-                        ))}
-                      </ul>
-                      <div className="flex flex-wrap gap-2 mt-4">
-                        {exp.skills.map((skill) => (
-                          <Badge key={skill} variant="secondary">
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          )}
-        </section>
+        {filteredExperiences.length === 0 && (
+          <div className="text-center py-10">
+            <p className="text-muted-foreground">No experience found matching your criteria.</p>
+          </div>
+        )}
+
+        {sections.map(renderSection)}
 
         <section className="space-y-6">
-          <h2 className="text-2xl font-bold">Research Projects</h2>
+          <h2 className="text-2xl font-bold tracking-tight border-b border-border/70 pb-3">Research Projects</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
               <Card key={project.id} className="flex flex-col h-full">
                 <CardHeader>
-                  <Link
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
-                  >
-                    <CardTitle className="hover:text-primary transition-colors cursor-pointer">
-                      {project.title}
-                    </CardTitle>
-                  </Link>
+                  {project.link ? (
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      <CardTitle className="hover:text-primary transition-colors cursor-pointer">
+                        {project.title}
+                      </CardTitle>
+                    </Link>
+                  ) : (
+                    <CardTitle>{project.title}</CardTitle>
+                  )}
                 </CardHeader>
                 <CardContent className="flex-1">
                   <p className="text-muted-foreground mb-4">{project.description}</p>
@@ -399,6 +443,7 @@ export default function ExperiencePage() {
             ))}
           </div>
         </section>
+
       </div>
     </div>
   )

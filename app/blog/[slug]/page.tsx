@@ -79,7 +79,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 </Badge>
               )}
             </div>
-            <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+            <h1 className="text-4xl font-bold tracking-tight mb-4">{post.title}</h1>
             <div className="flex flex-wrap items-center gap-6 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />

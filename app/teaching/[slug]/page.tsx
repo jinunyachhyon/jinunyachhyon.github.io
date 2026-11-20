@@ -56,7 +56,7 @@ export default function CoursePage({ params }: CoursePageProps) {
           ))}
         </div>
 
-        <h1 className="text-4xl font-bold mb-2">
+        <h1 className="text-4xl font-bold tracking-tight mb-2">
           {course.courseCode ? `${course.courseCode} - ` : ""}
           {course.title}
         </h1>
