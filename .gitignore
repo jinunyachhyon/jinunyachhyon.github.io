@@ -30,3 +30,6 @@ next-env.d.ts
 /public/Agentic AI/
 /public/2026 - 6CS012 - AI and Machine Learning Materials/
 /public/2026 - 6CS012 - Weekly Lectures - AI and Machine Learning/
+
+# macOS Finder metadata
+.DS_Store
