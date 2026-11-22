@@ -71,6 +71,27 @@ const interests = [
   },
 ]
 
+const talks = [
+  {
+    title: "NepPlural: A Human-Anchored Benchmark for Persona Annotation in Nepali Migration Discourse",
+    venue: "PlurVA-LLM @ AACL-IJCNLP 2026",
+    kind: "Oral Presentation",
+    year: 2026,
+  },
+  {
+    title: "Consolidating and Developing Benchmarking Datasets for the Nepali NLU Tasks",
+    venue: "AACL-IJCNLP 2025",
+    kind: "Conference Presentation",
+    year: 2025,
+  },
+  {
+    title: "Development of Pre-Trained Transformer-based Models for the Nepali Language",
+    venue: "COLING 2025",
+    kind: "Oral Presentation",
+    year: 2025,
+  },
+]
+
 const personLink =
   "font-semibold text-primary underline decoration-primary/30 underline-offset-4 transition-colors hover:decoration-primary"
 const orgLink =
@@ -154,7 +175,12 @@ export default function BioPage() {
                 <Ext href="https://www.gabrielrecchia.com/" className={personLink}>
                   Dr. Gabriel Recchia
                 </Ext>{" "}
-                on scalable oversight of LLMs. My research journey began during my undergraduate studies under{" "}
+                on scalable oversight of LLMs. As an Open Science Research Fellow at{" "}
+                <Ext href="https://www.manifoldrg.com/" className={orgLink}>
+                  Manifold Research Group
+                </Ext>
+                , I co-developed GUI-Perturbed, a domain-randomization benchmark that stress-tests GUI grounding
+                models and computer-use agents under distribution shift. My research journey began during my undergraduate studies under{" "}
                 <Ext href="https://scholar.google.com/citations?user=ZB6i0OKaPo4C&hl=en" className={personLink}>
                   Prof. Dr. Subarna Shakya
                 </Ext>{" "}
@@ -182,9 +208,9 @@ export default function BioPage() {
             <div className="flex items-start gap-5 md:block">
               <div className="w-28 shrink-0 overflow-hidden rounded-2xl ring-1 ring-border sm:w-40 md:w-full">
                 <Image
-                  src="/images/my_formal_image.jpeg"
+                  src="/images/my_formal_image_centered.jpeg"
                   alt="Jinu Nyachhyon"
-                  width={760}
+                  width={684}
                   height={1034}
                   priority
                   className="aspect-[4/5] w-full object-cover object-[center_20%]"
@@ -218,8 +244,58 @@ export default function BioPage() {
           </aside>
         </section>
 
-        {/* Research interests */}
+        {/* Selected publications */}
         <section className="mt-24">
+          <SectionHeading>Selected Publications</SectionHeading>
+          <ol className="divide-y divide-border/70">
+            {selected.map((p) => (
+              <li key={p.id} className="grid gap-1 py-5 sm:grid-cols-[5rem_1fr] sm:gap-6">
+                <span className="text-sm tabular-nums text-muted-foreground">{p.year}</span>
+                <div>
+                  <Ext
+                    href={p.doiUrl || p.arxivUrl || p.pdfUrl}
+                    className="group font-medium leading-snug transition-colors hover:text-primary"
+                  >
+                    {p.title}
+                    <ArrowUpRight className="ml-1 inline h-4 w-4 opacity-40 transition-opacity group-hover:opacity-100" />
+                  </Ext>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    <Authors authors={p.authors} />
+                  </p>
+                  <p className="mt-1 text-sm italic text-primary">{p.conference}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <Link
+            href="/publications"
+            className="mt-4 inline-flex items-center text-sm font-medium text-primary underline-offset-4 hover:underline"
+          >
+            All publications <ArrowRight className="ml-1 h-4 w-4" />
+          </Link>
+        </section>
+
+        {/* Talks & presentations */}
+        <section className="mt-20">
+          <SectionHeading>Talks &amp; Presentations</SectionHeading>
+          <ol className="divide-y divide-border/70">
+            {talks.map((t) => (
+              <li key={t.title} className="grid gap-1 py-5 sm:grid-cols-[5rem_1fr] sm:gap-6">
+                <span className="text-sm tabular-nums text-muted-foreground">{t.year}</span>
+                <div>
+                  <p className="font-medium leading-snug">{t.title}</p>
+                  <p className="mt-1 text-sm">
+                    <span className="italic text-primary">{t.venue}</span>
+                    <span className="text-muted-foreground"> · {t.kind}</span>
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* Research interests */}
+        <section className="mt-20">
           <SectionHeading>Research Interests</SectionHeading>
           <div className="grid gap-4 sm:grid-cols-2">
             {interests.map((c) => (
@@ -245,37 +321,6 @@ export default function BioPage() {
               </div>
             ))}
           </div>
-        </section>
-
-        {/* Selected publications */}
-        <section className="mt-20">
-          <SectionHeading>Selected Publications</SectionHeading>
-          <ol className="divide-y divide-border/70">
-            {selected.map((p) => (
-              <li key={p.id} className="grid gap-1 py-5 sm:grid-cols-[5rem_1fr] sm:gap-6">
-                <span className="text-sm tabular-nums text-muted-foreground">{p.year}</span>
-                <div>
-                  <Ext
-                    href={p.arxivUrl || p.pdfUrl}
-                    className="group font-medium leading-snug transition-colors hover:text-primary"
-                  >
-                    {p.title}
-                    <ArrowUpRight className="ml-1 inline h-4 w-4 opacity-40 transition-opacity group-hover:opacity-100" />
-                  </Ext>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    <Authors authors={p.authors} />
-                  </p>
-                  <p className="mt-1 text-sm italic text-primary">{p.conference}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-          <Link
-            href="/publications"
-            className="mt-4 inline-flex items-center text-sm font-medium text-primary underline-offset-4 hover:underline"
-          >
-            All publications <ArrowRight className="ml-1 h-4 w-4" />
-          </Link>
         </section>
 
         {/* Education */}

@@ -9,6 +9,7 @@ export interface Publication {
   pdfUrl: string
   codeUrl?: string
   arxivUrl?: string
+  doiUrl?: string
   publicationType: "journal" | "conference" | "preprint"
 }
 
@@ -22,9 +23,10 @@ export const publications: Publication[] = [
     abstract:
       "We introduced NepPlural, a benchmark of 2,148 code-mixed Nepali YouTube comments on youth migration, annotated with a four-axis persona taxonomy and a 300-comment gold set labelled by native speakers. We found that LLM annotation reliability depends heavily on protocol: batched chat labels barely agree, while per-comment annotation with an abstention option lets models match or exceed individual native speakers. A steerability probe shows frontier models adopt single persona axes well but rarely compose full personas.",
     tags: ["NLP", "Pluralistic Alignment", "Benchmarking", "LLM Annotation"],
-    pdfUrl: "https://arxiv.org/pdf/2610.15732",
+    pdfUrl: "https://aclanthology.org/2026.plurvallm-1.15.pdf",
     codeUrl: "https://github.com/iriis-research/NepPlural",
     arxivUrl: "https://arxiv.org/abs/2610.15732",
+    doiUrl: "https://doi.org/10.18653/2026.plurvallm-1.15",
     publicationType: "conference",
   },
   {
@@ -39,6 +41,7 @@ export const publications: Publication[] = [
     pdfUrl: "https://arxiv.org/pdf/2604.14262",
     codeUrl: "https://github.com/ManifoldRG/GUI-DR",
     arxivUrl: "https://arxiv.org/abs/2604.14262",
+    doiUrl: "https://doi.org/10.48550/arXiv.2604.14262",
     publicationType: "conference",
   },
   {
@@ -50,9 +53,10 @@ export const publications: Publication[] = [
     abstract:
       "We evaluated simple scalable-oversight protocols and found that they offer no reliable advantage when humans assess models that are “usually but not always” correct. While showing arguments for both sides sometimes improved accuracy, evaluators still became overconfident, even in wrong model answers, and prior optimistic results likely relied on human knowledge advantages that won’t scale with stronger models. Our findings highlight the need for oversight methods that remain robust to human biases and increasing model capabilities.",
     tags: ["Scalable Oversight", "Human-AI Interaction", "Automation Bias", "AI Alignment"],
-    pdfUrl: "https://arxiv.org/pdf/2507.19486",
-    codeUrl: "",
+    pdfUrl: "https://ojs.aaai.org/index.php/AAAI/article/view/41124/45085",
+    codeUrl: "https://github.com/modulo-research/bias",
     arxivUrl: "https://arxiv.org/abs/2507.19486",
+    doiUrl: "https://doi.org/10.1609/aaai.v40i44.41124",
     publicationType: "conference",
   },
   {
@@ -64,9 +68,10 @@ export const publications: Publication[] = [
     abstract:
       "We developed NLUE, a comprehensive 12-task Nepali NLU benchmark that expands far beyond the limited four-task Nep-gLUE. It includes classification, paraphrase, similarity, NLI, and a GMET task, revealing that current state-of-the-art models struggle with these more complex challenges. Our results show multilingual models outperform monolingual ones, underscoring the need for stronger Nepali-specific solutions and advancing NLP research for low-resource languages.",
     tags: ["NLP", "Benchmarking", "Nepali Language Understanding Evaluation (NLUE)"],
-    pdfUrl: "https://arxiv.org/pdf/2411.19244",
+    pdfUrl: "https://aclanthology.org/2025.findings-ijcnlp.119.pdf",
     codeUrl: "https://huggingface.co/collections/IRIIS-RESEARCH/nepali-lanuguage-understanding-evaluation-benchmark-68592c0105fe37d5d97629d4",
     arxivUrl: "https://arxiv.org/abs/2411.19244",
+    doiUrl: "https://doi.org/10.18653/v1/2025.findings-ijcnlp.119",
     publicationType: "conference",
   },
   {
@@ -81,6 +86,7 @@ export const publications: Publication[] = [
     pdfUrl: "https://aclanthology.org/2025.chipsal-1.2.pdf",
     codeUrl: "https://huggingface.co/collections/IRIIS-RESEARCH/nepali-language-models-6729fc7a5cd58b3f40f47708",
     arxivUrl: "https://arxiv.org/abs/2411.15734",
+    doiUrl: "https://aclanthology.org/2025.chipsal-1.2/",
     publicationType: "conference",
   },
   {

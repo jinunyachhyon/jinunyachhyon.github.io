@@ -347,9 +347,9 @@ function PublicationCard({ publication }: { publication: Publication }) {
           <Badge variant="outline">{publication.year}</Badge>
         </div>
         <CardTitle className="text-xl">
-          {publication.arxivUrl || publication.pdfUrl ? (
+          {publication.doiUrl || publication.arxivUrl || publication.pdfUrl ? (
             <Link
-              href={publication.arxivUrl || publication.pdfUrl}
+              href={publication.doiUrl || publication.arxivUrl || publication.pdfUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
@@ -380,7 +380,7 @@ function PublicationCard({ publication }: { publication: Publication }) {
           <Button variant="outline" size="sm" asChild>
             <Link href={publication.pdfUrl} target="_blank" rel="noopener noreferrer">
               <FileText className="mr-2 h-4 w-4" />
-              PDF
+              Paper
             </Link>
           </Button>
         )}
